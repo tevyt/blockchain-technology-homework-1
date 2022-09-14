@@ -49,10 +49,17 @@ function encryptMessage(alphabetMatrix, message) {
   return encryptedMessage.join("");
 }
 
+function printAlphabetMatrix(alphabetMatrix) {
+  alphabetMatrix.forEach((alphabet) => {
+    console.log(alphabet.join(""));
+  });
+}
+
 function main(key, message) {
   const alphabetMatrix = buildAlphabetMatrix(key);
 
-  console.log(alphabetMatrix);
+  printAlphabetMatrix(alphabetMatrix);
+
   const encryptedMessage = encryptMessage(alphabetMatrix, message);
 
   console.log(encryptedMessage);
